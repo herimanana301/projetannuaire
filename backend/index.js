@@ -20,7 +20,7 @@ app.post("/register", (req,res)=>{
     const firstName= req.body.firstname
     const lastName = req.body.lastname
 
-    database.query("INSERT INTO Users (email, password, first_name, last_name ) VALUES (?,?)", [emailReg, passwordReg, firstName, lastName],(err,result)=>{
+    database.query("INSERT INTO Users (email, password, first_name, last_name ) VALUES (?,?,?,?)", [emailReg, passwordReg, firstName, lastName],(err,result)=>{
         console.log(err);
     })
 })
