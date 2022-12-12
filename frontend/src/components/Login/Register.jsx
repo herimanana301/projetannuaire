@@ -17,6 +17,8 @@ function Register() {
       <label htmlFor="password">Password</label>
       <input id="password" name="password" type="password" />
       <button type="submit">Register</button>
+
+      <href>Already have an account</href>
     </div>
   );
 }
