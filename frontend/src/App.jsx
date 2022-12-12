@@ -10,10 +10,10 @@ function App() {
   const [lastname, setLastname] = useState("");
   const register = () => {
     Axios.post("http://localhost:3300/register", {
-      emailReg: emailReg,
-      passwordReg: passwordReg,
-      firstname: firstname,
-      lastname: lastname,
+      emailReg,
+      passwordReg,
+      firstname,
+      lastname,
     }).then((response) => {
       console.warn(response);
     });
