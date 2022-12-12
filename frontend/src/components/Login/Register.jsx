@@ -1,10 +1,10 @@
 import React from "react";
-import "./register.css";
+import "./login.css";
 import PropTypes from "prop-types";
 
 function Register({ setEmail, setPassword, firstname, lastname, register }) {
   return (
-    <div className="register">
+    <div className="firstpage">
       <img
         src="https://cdn.discordapp.com/attachments/1046791933583949824/1050694287517569064/logo.png"
         alt="logo"
