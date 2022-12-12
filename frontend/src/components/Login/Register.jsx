@@ -50,6 +50,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
           Register
         </button>
       </div>
+    <href> Already have an account </href>
     </div>
   );
 }
