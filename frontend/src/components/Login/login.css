@@ -3,7 +3,7 @@
 }
 
 h1{
-    color:#F9F9F9;
+    color:#EDEDED;
 }
 
 .form{
@@ -31,10 +31,15 @@ img{
 
 input{
     margin:0.7rem 0 1.5rem 0;
+    background-color:#EDEDED;
+    border:none;
+    border-radius: 5px;
 }
 
 button{
-    color:#23252F;
+    color:#EDEDED;
     padding: 1rem 2rem;
-    background-color: #C7C3D9;
+    background-color: #4965FF;
+    border:none;
+    border-radius: 5px;
 }
