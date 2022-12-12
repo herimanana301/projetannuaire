@@ -1,14 +1,30 @@
-require("dotenv").config();
+const express = require("express")
+const mysql = require("mysql")
+const cors = require('cors')
 
-const app = require("./src/app");
+const app = express();
 
-const port = parseInt(process.env.APP_PORT ?? "5000", 10);
-
-app.listen(port, (err) => {
-  if (err) {
-    console.error("Something bad happened");
-  } else {
-    // eslint-disable-next-line no-restricted-syntax
-    console.log(`Server is listening on ${port}`);
-  }
+app.use(express.json());
+app.use(cors());
+const database = mysql.createConnection({
+    user : "root",
+    host: "localhost",
+    password : 'bluepixteam',
+    database: "annuaire"
 });
+
+app.post("/register", (req,res)=>{
+
+    const emailReg = req.body.emailReg
+    const passwordReg = req.body.passwordReg
+    const firstName= req.body.firstname
+    const lastName = req.body.lastname
+
+    database.query("INSERT INTO Users (email, password, first_name, last_name ) VALUES (?,?,?,?)", [emailReg, passwordReg, firstName, lastName],(err,result)=>{
+        console.log(err);
+    })
+})
+
+app.listen(3300, ()=>{
+    console.log("running server")
+})
