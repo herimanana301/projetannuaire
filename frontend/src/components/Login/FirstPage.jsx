@@ -1,5 +1,5 @@
 import React from "react";
-import "./firstpage.css";
+import "./login.css";
 
 function FirstPage() {
   return (
