@@ -12,7 +12,7 @@ function FirstPage() {
       <button className="register-button" type="button">
         Register
       </button>
-      <href>Already have an acount ?</href>
+      <href> Already have an acount ?</href>
     </div>
   );
 }
