@@ -1,5 +1,6 @@
 import React from "react";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 function FirstPage() {
   return (
@@ -9,10 +10,13 @@ function FirstPage() {
         alt="logo"
       />
       <h1>BOOKI</h1>
-      <button className="register-button" type="button">
-        Register
-      </button>
-      <href> Already have an acount ?</href>
+      <Link to="/Register">
+        <button className="register-button" type="button">
+          Register
+        </button>
+      </Link>
+
+      <Link to="/Login">Already have an acount ?</Link>
     </div>
   );
 }

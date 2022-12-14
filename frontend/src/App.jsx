@@ -1,9 +1,13 @@
 import { useState } from "react";
 import Axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./components/Login/Register";
+import Login from "./components/Login/Login";
+import FirstPage from "./components/Login/FirstPage";
+import Navbar from "./components/NavBar/NavBar";
 import "./App.css";
 
-function App() {
+export default function App() {
   const [emailReg, setEmailReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -19,16 +23,26 @@ function App() {
     });
   };
   return (
-    <div className="App">
-      <Register
-        setEmail={setEmailReg}
-        setPassword={setPasswordReg}
-        firstname={setFirstname}
-        lastname={setLastname}
-        register={register}
-      />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/FirstPage" element={<FirstPage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route
+            path="/Register"
+            element={
+              <Register
+                setEmail={setEmailReg}
+                setPassword={setPasswordReg}
+                firstname={setFirstname}
+                lastname={setLastname}
+                register={register}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
-export default App;
