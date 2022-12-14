@@ -47,7 +47,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
             setPassword(e.target.value);
           }}
         />
-        <button type="submit" onClick={register}>
+        <button className="login-button" type="submit" onClick={register}>
           Register
         </button>
       </div>

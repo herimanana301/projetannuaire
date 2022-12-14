@@ -1,8 +1,9 @@
 import React from "react";
+import "../PhoneBook/style.css";
 
 function NavBar() {
   return (
-    <div>
+    <div className="navbar">
       <input type="text" />
       <button type="button">
         <img src="../src/assets/add.png" alt="+" />

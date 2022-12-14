@@ -11,7 +11,7 @@ function FirstPage() {
       />
       <h1>BOOKI</h1>
       <Link to="/Register">
-        <button className="register-button" type="button">
+        <button className="login-button" type="button">
           Register
         </button>
       </Link>

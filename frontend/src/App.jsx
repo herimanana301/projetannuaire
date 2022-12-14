@@ -5,7 +5,6 @@ import Register from "./components/Login/Register";
 import Login from "./components/Login/Login";
 import FirstPage from "./components/Login/FirstPage";
 import ContactPage from "./components/PhoneBook/ContactPage";
-import "./App.css";
 
 function App() {
   const [emailReg, setEmailReg] = useState("");
