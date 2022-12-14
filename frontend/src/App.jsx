@@ -6,7 +6,7 @@ import Login from "./components/Login/Login";
 import FirstPage from "./components/Login/FirstPage";
 import "./App.css";
 
-export default function App() {
+function App() {
   const [emailReg, setEmailReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
   const [firstname, setFirstname] = useState("");
