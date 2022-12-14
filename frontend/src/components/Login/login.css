@@ -22,7 +22,7 @@ h1{
 
 img{
     width: 50vw;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .register-button{
@@ -42,4 +42,24 @@ button{
     background-color: #4965FF;
     border:none;
     border-radius: 5px;
+}
+li{
+    float: left;
+}
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #171a20;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
 }
