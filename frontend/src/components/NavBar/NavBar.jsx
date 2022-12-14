@@ -1,5 +1,5 @@
 import React from "react";
-import "../PhoneBook/style.css";
+import "../PhoneBook/contactpage.css";
 
 function NavBar() {
   return (

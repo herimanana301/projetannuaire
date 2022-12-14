@@ -1,0 +1,7 @@
+.formcontact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 97vh;
+
+}
