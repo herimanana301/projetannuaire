@@ -1,6 +1,7 @@
 import React from "react";
 import "./login.css";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Register({ setEmail, setPassword, firstname, lastname, register }) {
   return (
@@ -21,7 +22,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
         />
         <label htmlFor="text">First name</label>
         <input
-          id="text"
+          id="firstname"
           name="firstname"
           type="text"
           onChange={(e) => {
@@ -30,7 +31,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
         />
         <label htmlFor="text">Last name</label>
         <input
-          id="text"
+          id="lastname"
           name="lastname"
           type="text"
           onChange={(e) => {
@@ -50,7 +51,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
           Register
         </button>
       </div>
-    <href> Already have an account </href>
+      <Link to="/Login">Already have an account ?</Link>
     </div>
   );
 }
@@ -60,7 +61,7 @@ Register.propTypes = {
   setPassword: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
-  register: PropTypes.string.isRequired,
+  register: PropTypes.func.isRequired,
 };
 
 export default Register;
