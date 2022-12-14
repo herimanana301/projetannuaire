@@ -63,3 +63,9 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+.wording{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

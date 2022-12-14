@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./components/Login/Register";
 import Login from "./components/Login/Login";
 import FirstPage from "./components/Login/FirstPage";
-import Navbar from "./components/NavBar/NavBar";
 import "./App.css";
 
 export default function App() {
@@ -25,7 +24,6 @@ export default function App() {
   return (
     <Router>
       <div>
-        <Navbar />
         <Routes>
           <Route path="/FirstPage" element={<FirstPage />} />
           <Route path="/Login" element={<Login />} />
