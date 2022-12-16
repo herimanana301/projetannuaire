@@ -9,6 +9,7 @@ function ContactPage() {
         <button className="allcontact" type="button">
           All
         </button>
+
         <button className="addnewcategorie" type="button">
           Add New Category
         </button>

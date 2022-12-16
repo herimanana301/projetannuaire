@@ -4,7 +4,7 @@ import "./createcontact.css";
 function CreateContact() {
   return (
     <div className="createcontact">
-      <img src="../assets/profilepic.png" alt="profilepicture" />
+      <img src="/src/assets/profilepic.png" alt="profilepicture" />
       <div className="formcontact">
         <label htmlFor="text">Last name</label>
         <input id="lastname" name="lastname" type="text" />

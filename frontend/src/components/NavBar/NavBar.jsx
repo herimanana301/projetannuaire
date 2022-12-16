@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../PhoneBook/contactpage.css";
 
 function NavBar() {
   return (
     <div className="navbar">
       <input type="text" />
-      <button type="button">
-        <img src="../src/assets/add.png" alt="+" />
-      </button>
+      <Link to="/CreateContact">
+        <button type="button">
+          <img src="../src/assets/add.png" alt="+" />
+        </button>
+      </Link>
     </div>
   );
 }
