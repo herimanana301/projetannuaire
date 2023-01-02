@@ -57,10 +57,10 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
 }
 
 Register.propTypes = {
-  setEmail: PropTypes.string.isRequired,
-  setPassword: PropTypes.string.isRequired,
-  firstname: PropTypes.string.isRequired,
-  lastname: PropTypes.string.isRequired,
+  setEmail: PropTypes.func.isRequired,
+  setPassword: PropTypes.func.isRequired,
+  firstname: PropTypes.func.isRequired,
+  lastname: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
 };
 

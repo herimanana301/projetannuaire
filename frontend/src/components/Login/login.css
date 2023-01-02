@@ -42,6 +42,7 @@ button{
     background-color: #4965FF;
     border:none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .wording{

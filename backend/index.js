@@ -25,6 +25,25 @@ app.post("/register", (req,res)=>{
     })
 })
 
+app.post("/login", (req, res)=>{
+    const email= req.body.email
+    const password = req.body.password
+
+    database.query("SELECT * FROM Users WHERE email = ? AND password = ?", 
+    [email, password],
+    (err, result)=>{
+        if(err){
+           res.send({err:err}) 
+        }
+        if(result.length>0){
+            res.send(result);
+        }else{
+            res.send({message : "Une erreur au niveau de la combinaison email/mot de passe"})
+        }
+    }
+)
+})
+
 app.listen(3300, ()=>{
     console.log("running server")
 })
