@@ -14,7 +14,7 @@ function App() {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loginStatus, setLoginStatus] = useState("");
+  const [loginStatus, setloginStatus] = useState("");
 
   const register = () => {
     Axios.post("http://localhost:3300/register", {
@@ -31,7 +31,8 @@ function App() {
       email,
       password,
     }).then((response) => {
-      console.warn(response);
+      setloginStatus(response);
+      console.warn(loginStatus);
     });
   };
   return (

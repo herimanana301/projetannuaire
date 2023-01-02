@@ -38,7 +38,7 @@ app.post("/login", (req, res)=>{
         if(result.length>0){
             res.send(result);
         }else{
-            res.send({message : "Une erreur au niveau de la combinaison email/mot de passe"})
+            res.send('Wrong')
         }
     }
 )

@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import "./login.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
