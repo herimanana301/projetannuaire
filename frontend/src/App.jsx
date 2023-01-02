@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./components/Login/Register";
 import Login from "./components/Login/Login";
 import FirstPage from "./components/Login/FirstPage";
-import "./App.css";
+import ContactPage from "./components/PhoneBook/ContactPage";
+import CreateContact from "./components/PhoneBook/CreateContact";
 
 function App() {
   const [emailReg, setEmailReg] = useState("");
@@ -60,6 +61,8 @@ function App() {
               />
             }
           />
+          <Route path="/ContactPage" element={<ContactPage />} />
+          <Route path="/CreateContact" element={<CreateContact />} />
         </Routes>
       </div>
     </Router>

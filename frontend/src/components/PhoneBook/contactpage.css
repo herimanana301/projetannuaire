@@ -1,0 +1,22 @@
+.contactpage{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:#C7C3D9;
+    align-items: center;
+    height: 97vh;
+}
+
+.categorie{
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar{
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar img{
+    width: 1rem;
+}
