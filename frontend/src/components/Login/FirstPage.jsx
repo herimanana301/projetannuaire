@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 function FirstPage() {
   return (
     <div className="firstpage">
-      <img
-        src="https://cdn.discordapp.com/attachments/1046791933583949824/1050694287517569064/logo.png"
-        alt="logo"
-      />
+      <img src="/src/assets/logo.png" alt="logo" />
       <h1>BOOKI</h1>
       <Link to="/Register">
         <button className="login-button" type="button">
@@ -16,7 +13,9 @@ function FirstPage() {
         </button>
       </Link>
 
-      <Link to="/Login">Already have an acount ?</Link>
+      <Link className="login-link" to="/Login">
+        Already have an acount ?
+      </Link>
     </div>
   );
 }

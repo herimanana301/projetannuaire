@@ -7,7 +7,7 @@ function NavBar() {
     <div className="navbar">
       <input type="text" />
       <Link to="/CreateContact">
-        <button type="button">
+        <button className="add" type="button">
           <img src="../src/assets/add.png" alt="+" />
         </button>
       </Link>
