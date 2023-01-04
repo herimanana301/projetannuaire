@@ -12,6 +12,10 @@ function App() {
   const [passwordReg, setPasswordReg] = useState("");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginStatus, setloginStatus] = useState("");
+
   const register = () => {
     Axios.post("http://localhost:3300/register", {
       emailReg,
@@ -22,12 +26,30 @@ function App() {
       console.warn(response);
     });
   };
+  const login = () => {
+    Axios.post("http://localhost:3300/login", {
+      email,
+      password,
+    }).then((response) => {
+      setloginStatus(response);
+      console.warn(loginStatus);
+    });
+  };
   return (
     <Router>
       <div>
         <Routes>
-          <Route path="/FirstPage" element={<FirstPage />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/" element={<FirstPage />} />
+          <Route
+            path="/Login"
+            element={
+              <Login
+                setEmail={setEmail}
+                setPassword={setPassword}
+                login={login}
+              />
+            }
+          />
           <Route
             path="/Register"
             element={

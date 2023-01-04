@@ -1,21 +1,40 @@
 import React from "react";
 import "./login.css";
+import PropTypes from "prop-types";
 
-function Login() {
+function Login({ setEmail, setPassword, login }) {
   return (
     <div className="firstpage">
       <img src="src/assets/logo.png" alt="logo" />
       <div className="wording">
         <label htmlFor="email">Email</label>
-        <input required id="email" name="email" type="email" />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
         <label htmlFor="password">Password</label>
-        <input required id="password" name="password" type="password" />
-        <button className="login-button" type="submit">
+        <input
+          id="password"
+          name="password"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button className="login-button" type="submit" onClick={login}>
           Login
         </button>
       </div>
     </div>
   );
 }
+
+Login.propTypes = {
+  setEmail: PropTypes.func.isRequired,
+  setPassword: PropTypes.func.isRequired,
+  login: PropTypes.func.isRequired,
+};
 
 export default Login;
