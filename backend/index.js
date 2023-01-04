@@ -15,15 +15,16 @@ const database = mysql.createConnection({
 
 app.post("/register", (req,res)=>{
 
-    const emailReg = req.body.emailReg
-    const passwordReg = req.body.passwordReg
-    const firstName= req.body.firstname
-    const lastName = req.body.lastname
+    const user = req.body.user
+    const pwd = req.body.pwd
+    const firstName= req.body.firstName
+    const lastName = req.body.lastName
 
-    database.query("INSERT INTO Users (email, password, first_name, last_name ) VALUES (?,?,?,?)", [emailReg, passwordReg, firstName, lastName],(err,result)=>{
+    database.query("INSERT INTO Users (email, password, first_name, last_name ) VALUES (?,?,?,?)", [user, pwd, firstName, lastName],(err,result)=>{
         console.log(err);
     })
 })
+
 
 app.post("/login", (req, res)=>{
     const email= req.body.email
