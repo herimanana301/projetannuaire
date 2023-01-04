@@ -5,10 +5,7 @@ import PropTypes from "prop-types";
 function Login({ setEmail, setPassword, login }) {
   return (
     <div className="firstpage">
-      <img
-        src="https://cdn.discordapp.com/attachments/1046791933583949824/1050694287517569064/logo.png"
-        alt="logo"
-      />
+      <img src="src/assets/logo.png" alt="logo" />
       <div className="wording">
         <label htmlFor="email">Email</label>
         <input
