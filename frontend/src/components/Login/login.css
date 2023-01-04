@@ -1,5 +1,19 @@
+@font-face {
+    font-family: MADE TOMMY;
+    src: local("MADE TOMMY"),
+         local("MADE TOMMY"),
+         url(MADE\TOMMY.otf);
+  }
+
+
 *{
     background-color: #181A21;
+    font-family: MADE TOMMY;
+}
+
+.login-link{
+    color:#C7C3D9;
+    text-decoration: none;
 }
 
 h1{
