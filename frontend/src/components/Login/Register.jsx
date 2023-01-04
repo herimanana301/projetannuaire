@@ -13,6 +13,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
       <div className="form">
         <label htmlFor="email">Email</label>
         <input
+          required
           id="email"
           name="email"
           type="email"
@@ -22,6 +23,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
         />
         <label htmlFor="text">First name</label>
         <input
+          required
           id="firstname"
           name="firstname"
           type="text"
@@ -31,6 +33,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
         />
         <label htmlFor="text">Last name</label>
         <input
+          required
           id="lastname"
           name="lastname"
           type="text"
@@ -40,6 +43,7 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
         />
         <label htmlFor="password">Password</label>
         <input
+          required
           id="password"
           name="password"
           type="password"
@@ -51,7 +55,9 @@ function Register({ setEmail, setPassword, firstname, lastname, register }) {
           Register
         </button>
       </div>
-      <Link to="/Login">Already have an account ?</Link>
+      <Link className="login-link" to="/Login">
+        Already have an account ?
+      </Link>
     </div>
   );
 }
