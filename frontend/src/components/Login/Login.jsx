@@ -9,6 +9,7 @@ function Login({ setEmail, setPassword, login }) {
       <div className="wording">
         <label htmlFor="email">Email</label>
         <input
+          className="input-insertion"
           id="email"
           name="email"
           type="email"
@@ -17,6 +18,7 @@ function Login({ setEmail, setPassword, login }) {
         />
         <label htmlFor="password">Password</label>
         <input
+          className="input-insertion"
           id="password"
           name="password"
           type="password"
