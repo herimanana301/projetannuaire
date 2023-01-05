@@ -2,15 +2,15 @@ const express = require("express")
 const mysql = require("mysql")
 const cors = require('cors')
 const crypto=require("crypto")
+const jwt = require('jsonwebtoken');
 
 const app = express();
-
 app.use(express.json());
-app.use(cors());
+app.use(cors())
 const database = mysql.createConnection({
     user : "root",
     host: "localhost",
-    password : 'bluepixteam',
+    password : "bluepixteam",
     database: "annuaire"
 });
 function crypt(pawd){
@@ -48,17 +48,20 @@ app.post("/login", (req, res)=>{
     [email, password],
     (err, result)=>{
         if(err){
-           res.send({err:err}) 
+            console.error(err);
+            res.sendStatus(500);
         }
         if(result.length>0){
-            res.send(result);
+            const accessToken = jwt.sign({ userId: result[0].id }, 'secretkey');
+            res.cookie("access_token", accessToken, {httpOnly: true});
+            res.json({accessToken})
         }else{
-            res.send('Wrong')
+            res.sendStatus(401);
         }
     }
 )
 })
 
-app.listen(3300, ()=>{
+app.listen(3305, ()=>{
     console.log("running server")
 })

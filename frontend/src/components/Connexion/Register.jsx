@@ -12,7 +12,7 @@ import logo from "../../assets/logo.png";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = "http://localhost:3300/register";
+const REGISTER_URL = "http://localhost:3305/register";
 
 function Register() {
   const emailRef = useRef();
@@ -53,7 +53,6 @@ function Register() {
   }, [user, pwd, matchPwd]);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess(true);
     try {
       const response = await axios.post(REGISTER_URL, {
         user,
@@ -64,6 +63,7 @@ function Register() {
       setUser("");
       setPwd("");
       setMatchPwd("");
+      setSuccess(true);
       console.warn(response);
     } catch (err) {
       if (!err?.response) {

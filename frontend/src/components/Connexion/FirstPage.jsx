@@ -1,19 +1,20 @@
 import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 function FirstPage() {
   return (
     <div className="firstpage">
-      <img src="/src/assets/logo.png" alt="logo" />
+      <img src={logo} alt="logo" />
       <h1>BOOKI</h1>
-      <Link to="/Register">
+      <Link to="/register">
         <button className="login-button" type="button">
           Register
         </button>
       </Link>
 
-      <Link className="login-link" to="/Login">
+      <Link className="login-link" to="/login">
         Already have an acount ?
       </Link>
     </div>

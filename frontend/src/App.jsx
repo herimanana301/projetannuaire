@@ -1,25 +1,34 @@
 import { useState } from "react";
 import Axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Register from "./components/Login/Register";
-import Login from "./components/Login/Login";
-import FirstPage from "./components/Login/FirstPage";
+import Cookies from "js-cookie";
+import Register from "./components/Connexion/Register";
+import Login from "./components/Connexion/Login";
+import FirstPage from "./components/Connexion/FirstPage";
 import ContactPage from "./components/PhoneBook/ContactPage";
 import CreateContact from "./components/PhoneBook/CreateContact";
 
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loginStatus, setloginStatus] = useState("");
+  const [errorLog, setErrorLog] = useState();
 
   const login = () => {
-    Axios.post("http://localhost:3300/login", {
+    Axios.post("http://localhost:3305/login", {
       email,
       password,
-    }).then((response) => {
-      setloginStatus(response);
-      console.warn(loginStatus);
-    });
+    })
+      .then((response) => {
+        Cookies.set("access_token", response.data.accessToken, {
+          sameSite: "Lax",
+        });
+        console.warn(response.data.accessToken);
+      })
+      .catch((error) => {
+        if (error) {
+          setErrorLog(true);
+        }
+      });
   };
   return (
     <Router>
@@ -27,18 +36,19 @@ function App() {
         <Routes>
           <Route path="/" element={<FirstPage />} />
           <Route
-            path="/Login"
+            path="/login"
             element={
               <Login
                 setEmail={setEmail}
                 setPassword={setPassword}
                 login={login}
+                errorLog={errorLog}
               />
             }
           />
           <Route path="/register" element={<Register />} />
-          <Route path="/ContactPage" element={<ContactPage />} />
-          <Route path="/CreateContact" element={<CreateContact />} />
+          <Route path="/home" element={<ContactPage />} />
+          <Route path="/addcontact" element={<CreateContact />} />
         </Routes>
       </div>
     </Router>
