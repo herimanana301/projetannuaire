@@ -19,6 +19,7 @@
 h1{
     color:#EDEDED;
     font-size: 4vh;
+    margin-bottom: 2rem;
 }
 
 .form{
@@ -32,7 +33,7 @@ h1{
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap:1rem;
+    gap:3vh;
 }
 
 img{
@@ -40,22 +41,27 @@ img{
     margin-top: 2rem;
 }
 
-
-input{
+.input-insertion{
     margin:0.7rem 0 1.5rem 0;
     background-color:#EDEDED;
     border:none;
     border-radius: 5px;
+    width: 12rem;
+    height: 2rem;
+    padding: 10px;
+    font-size: 0.9rem;
 }
 
 .login-button{
     color:#EDEDED;
+    font-family: MADE TOMMY;
+    font-size: larger;
     padding: 1rem 2rem;
     background-color: #4965FF;
     border:none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10vh;
+    margin-top: 6vh;
 }
 
 .wording{
@@ -63,4 +69,5 @@ input{
     flex-direction: column;
     align-items: center;
     color:#C7C3D9;
+    margin-top: 6vh;
 }
