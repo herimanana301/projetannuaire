@@ -2,9 +2,9 @@ import { useState } from "react";
 import Axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cookies from "js-cookie";
-import Register from "./components/Connexion/Register";
-import Login from "./components/Connexion/Login";
-import FirstPage from "./components/Connexion/FirstPage";
+import Register from "./components/Login/Register";
+import Login from "./components/Login/Login";
+import FirstPage from "./components/Login/FirstPage";
 import ContactPage from "./components/PhoneBook/ContactPage";
 import CreateContact from "./components/PhoneBook/CreateContact";
 
