@@ -51,6 +51,7 @@ function Register() {
   useEffect(() => {
     setErrMsg("");
   }, [user, pwd, matchPwd]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -84,7 +85,7 @@ function Register() {
         <section>
           <h1>Success!</h1>
           <p>
-            <Link to="/Login">Login</Link>
+            <Link to="/login">Login</Link>
           </p>
         </section>
       ) : (
@@ -228,7 +229,7 @@ function Register() {
             Already registered?
             <br />
             <span className="line">
-              <Link to="/Login">Login</Link>
+              <Link to="/login">Login</Link>
             </span>
           </p>
         </section>
