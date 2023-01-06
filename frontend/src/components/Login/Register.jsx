@@ -97,7 +97,6 @@ function Register() {
           >
             {errMsg}
           </p>
-          <h1>Register</h1>
           <form>
             <label htmlFor="firstname">First Name:</label>
             <input
@@ -225,12 +224,10 @@ function Register() {
               Register
             </button>
           </form>
-          <p>
-            Already registered?
-            <br />
-            <span className="line">
-              <Link to="/login">Login</Link>
-            </span>
+          <p className="already-accound">
+            <Link to="/login" className="link">
+              Already registered? Login
+            </Link>
           </p>
         </section>
       )}

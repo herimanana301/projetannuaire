@@ -29,32 +29,39 @@ section {
     width: 100%;
     max-width: 420px;
     min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 1rem;
-    background-color: rgba(0,0,0,0.4);
+}
+
+input{
+    margin:0.7rem 0 1.5rem 0;
+    background-color:#EDEDED;
+    border:none;
+    border-radius: 5px;
+    width: 12rem;
+    height: 2rem;
+    padding: 10px;
+    font-size: 0.9rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-grow: 1;
-    padding-bottom: 1rem;
+    align-items: center;
 }
 
 a, a:visited {
     color: #fff;
 }
 
-label,
 button {
-  margin-top: 1rem;
-}
-
-button {
-  padding: 0.5rem;
+    color:#EDEDED;
+    font-family: MADE TOMMY;
+    font-size: larger;
+    padding: 1rem 2rem;
+    background-color: #4965FF;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .instructions {
@@ -100,4 +107,12 @@ button {
 
 .line {
     display: inline-block;
+}
+
+.already-accound{
+    margin:1rem;
+}
+
+.link{
+    text-decoration: none;
 }

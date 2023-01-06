@@ -22,13 +22,6 @@ h1{
     margin-bottom: 2rem;
 }
 
-.form{
-    color:#C7C3D9;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .firstpage{ 
     display:flex;
     flex-direction: column;
