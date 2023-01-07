@@ -1,0 +1,18 @@
+.navbar{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    margin: 0;
+}
+
+.add{
+    margin: 0;
+    padding: 10px;
+}
+button.add{
+    background-color: #171A20;
+}
