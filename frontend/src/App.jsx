@@ -6,6 +6,7 @@ import FirstPage from "./components/Login/FirstPage";
 import ContactPage from "./components/PhoneBook/ContactPage";
 import CreateContact from "./components/PhoneBook/CreateContact";
 import { ForLogedPage, ToHome } from "./components/ForLogedPage";
+import PageNotFound from "./components/NotFound/NotFound";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<FirstPage />} />
+          <Route path="/" element={ToHome(<FirstPage />)} />
           <Route
             path="/login"
             element={ToHome(
@@ -27,9 +28,10 @@ function App() {
               />
             )}
           />
-          <Route path="/register" element={<Register />} />
-          <Route path="/home" element={<ContactPage />} />
+          <Route path="/register" element={ToHome(<Register />)} />
+          <Route path="/home" element={ForLogedPage(<ContactPage />)} />
           <Route path="/addcontact" element={ForLogedPage(<CreateContact />)} />
+          <Route path="*" element={<PageNotFound />} status={404} />
         </Routes>
       </div>
     </Router>
