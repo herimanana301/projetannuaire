@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import Axios from "axios";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./components/Login/Register";
 import Login from "./components/Login/Login";

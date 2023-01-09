@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import Axios from "axios";
 import Cookies from "js-cookie";
 
-import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 function Login({ setEmail, setPassword, email, password }) {
   const [errorState, setErrorState] = useState();
