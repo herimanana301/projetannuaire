@@ -62,6 +62,22 @@ app.post("/login", (req, res)=>{
 )
 })
 
+app.post("/api/contacts",(req, res)=>{
+    const idUser= req.body.idUser
+    const lastName = req.body.lastName
+    const firstName=req.body.firstName
+    const phoneNumber=req.body.phoneNumber
+    const email=req.body.email
+    
+    database.query("INSERT INTO Contacts (id_users,contact_firstname, contact_lastname, contact_phonenumber, contact_email ) VALUES(?,?,?,?,?)", [idUser, lastName,firstName,phoneNumber, email],(error,result)=>{
+        if(error){
+            console.error(error)
+            res.sendStatus(500)
+        }else{
+            res.sendStatus(200)
+        }
+    })
+} )
 
 app.listen(3305, ()=>{
     console.log("running server")
