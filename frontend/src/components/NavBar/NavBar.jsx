@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../PhoneBook/contactpage.css";
 import addImage from "../../assets/add.png";
+import "./navbar.css";
 
 function NavBar() {
   return (
