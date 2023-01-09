@@ -2,6 +2,7 @@ import React from "react";
 import "./login.css";
 import PropTypes from "prop-types";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function Login({ setEmail, setPassword, login }) {
   return (
@@ -30,6 +31,9 @@ function Login({ setEmail, setPassword, login }) {
           Login
         </button>
       </div>
+      <Link className="login-link" to="/register">
+        don't have an account ?
+      </Link>
     </div>
   );
 }

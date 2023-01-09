@@ -13,9 +13,10 @@ function FirstPage() {
           Register
         </button>
       </Link>
-
-      <Link className="login-link" to="/login">
-        Already have an acount ?
+      <Link to="/login">
+        <button className="login-button" type="button">
+          login
+        </button>
       </Link>
     </div>
   );
