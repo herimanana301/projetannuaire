@@ -3,7 +3,6 @@ import "./login.css";
 import PropTypes from "prop-types";
 import Axios from "axios";
 import Cookies from "js-cookie";
-
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
