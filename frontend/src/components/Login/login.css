@@ -64,3 +64,8 @@ img{
     color:#C7C3D9;
     margin-top: 6vh;
 }
+.firstpagebutton {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

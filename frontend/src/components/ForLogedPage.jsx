@@ -2,12 +2,19 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
+const token = Cookies.get("access_token");
+
 function ForLogedPage(component) {
-  const token = Cookies.get("access_token");
   if (!token) {
     return <Navigate to="/login" />;
   }
   return component;
 }
 
-export default ForLogedPage;
+function ToHome(component) {
+  if (token) {
+    return <Navigate to="/home" />;
+  }
+  return component;
+}
+export { ForLogedPage, ToHome };
