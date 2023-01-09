@@ -1,8 +1,8 @@
 @font-face {
-    font-family: MADE TOMMY;
-    src: local("MADE TOMMY"),
-         local("MADE TOMMY"),
-         url(MADE\TOMMY.otf);
+    font-family: 'MADE TOMMY';
+    src: url('../assets/font/MADE TOMMY Regular_PERSONAL USE.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
   }
 
 
