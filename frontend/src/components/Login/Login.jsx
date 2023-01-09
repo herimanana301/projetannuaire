@@ -1,8 +1,8 @@
 import React from "react";
 import "./login.css";
 import PropTypes from "prop-types";
-import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 function Login({ setEmail, setPassword, login }) {
   return (
