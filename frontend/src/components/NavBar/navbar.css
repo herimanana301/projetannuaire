@@ -3,16 +3,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #23252F;
+    padding: 0 1rem;
+    box-shadow: 0px 7px 21px 11px #23252F;
+    border-top: solid #3D3D45 0.5px;
 }
 
 img{
     margin: 0;
+    background-color: #23252F;
 }
 
 .add{
     margin: 0;
-    padding: 10px;
-}
+    padding: 0;
+}           
+
 button.add{
-    background-color: #171A20;
+    background-color: #23252F;
+    border-radius: 0;
 }
