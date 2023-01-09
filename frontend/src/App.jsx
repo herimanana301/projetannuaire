@@ -48,7 +48,7 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
-          <Route path="/home" element={ForLogedPage(<ContactPage />)} />
+          <Route path="/home" element={<ContactPage />} />
           <Route path="/addcontact" element={ForLogedPage(<CreateContact />)} />
         </Routes>
       </div>
