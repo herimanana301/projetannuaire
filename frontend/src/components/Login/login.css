@@ -84,3 +84,28 @@ img{
     flex-direction: column;
     align-items: center;
 }
+
+.login-error{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom:2rem;
+    border-radius: 10px;
+    background-color: #3D3D45;
+    margin:1.5rem;
+    padding:10px;
+}
+
+.login-error>h1{
+    font-size: 20px;
+    color:#CA2525 ;
+    background-color: #3D3D45;  
+}
+
+.login-error>img{
+    background-color: #3D3D45;
+    width: 12%;
+    height: 12%;
+}
+

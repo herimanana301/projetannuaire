@@ -27,7 +27,12 @@ function Login({ setEmail, setPassword, email, password }) {
   };
   return (
     <div className="firstpage">
-      {errorState ? <h1>Vos identifiants sont incorrect</h1> : null}
+      {errorState ? (
+        <div className="login-error">
+          <img src="../src/assets/error.png" alt="!" />
+          <h1>Your credentials are incorrect.</h1>
+        </div>
+      ) : null}
       <img src={logo} alt="logo" />
       <div className="wording">
         <label htmlFor="email">Email</label>
