@@ -3,6 +3,8 @@ const mysql = require("mysql")
 const cors = require('cors')
 const crypto=require("crypto")
 const jwt = require('jsonwebtoken');
+const { resourceLimits } = require("worker_threads");
+const { allowedNodeEnvironmentFlags } = require("process");
 
 const app = express();
 app.use(express.json());
@@ -90,6 +92,28 @@ app.get("/api/contacts/:idUser",(req,res)=>{
         }
   });
 });
+
+app.get("/admin/allusers",(req,res)=>{
+    database.query("SELECT * FROM Users",(err, result)=>{
+        if(err){
+            console.error(err)
+        }else{
+            res.json(result)
+        }
+    })
+})
+
+app.post("/currentuser", (req,res)=>{
+    const idUser= req.body.idUser
+    database.query("SELECT * FROM Users WHERE id = ?",[idUser],(err, result)=>{
+        if(err){
+            console.error(err)
+        }else{
+            res.json
+        }
+    })
+})
+
 app.listen(3305, ()=>{
     console.log("running server")
 })
