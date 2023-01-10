@@ -79,6 +79,17 @@ app.post("/api/contacts",(req, res)=>{
     })
 } )
 
+app.get("/api/contacts/:idUser",(req,res)=>{
+    idUser=req.params.idUser
+
+    database.query("SELECT * FROM Contacts WHERE id_users = ?",[idUser],(err, result)=>{
+        if(err){
+            console.error(err)
+        }else{
+            res.json(result)
+        }
+  });
+});
 app.listen(3305, ()=>{
     console.log("running server")
 })
