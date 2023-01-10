@@ -31,7 +31,8 @@ h1{
 
 img{
     width: 40vw;
-    margin-top: 2rem;
+    padding-top: 2rem;
+    background-color: #181A21;
 }
 
 .input-insertion{
@@ -45,6 +46,19 @@ img{
     font-size: 0.9rem;
 }
 
+.register-button{
+    color:#4965FF;
+    font-family: MADE TOMMY;
+    font-size: larger;
+    padding: 1rem 2rem;
+    background-color: #EDEDED;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 6vh;
+    width: 8rem;
+}
+
 .login-button{
     color:#EDEDED;
     font-family: MADE TOMMY;
@@ -55,6 +69,7 @@ img{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 6vh;
+    width: 8rem;
 }
 
 .wording{
@@ -63,4 +78,9 @@ img{
     align-items: center;
     color:#C7C3D9;
     margin-top: 6vh;
+}
+.firstpagebutton {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }

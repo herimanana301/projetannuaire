@@ -10,7 +10,7 @@ function NavBar() {
       <input type="text" />
       <Link to="/addcontact">
         <button className="add" type="button">
-          <img src={addImage} alt="+" />
+          <img className="img-add" src={addImage} alt="+" />
         </button>
       </Link>
     </div>

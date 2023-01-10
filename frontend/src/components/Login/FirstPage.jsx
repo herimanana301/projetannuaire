@@ -8,16 +8,18 @@ function FirstPage() {
     <div className="firstpage">
       <img src={logo} alt="logo" />
       <h1>BOOKI</h1>
-      <Link to="/register">
-        <button className="login-button" type="button">
-          Register
-        </button>
-      </Link>
-      <Link to="/login">
-        <button className="login-button" type="button">
-          login
-        </button>
-      </Link>
+      <div className="firstpagebutton">
+        <Link to="/register">
+          <button className="login-button" type="button">
+            Register
+          </button>
+        </Link>
+        <Link to="/login">
+          <button className="register-button" type="button">
+            Login
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
