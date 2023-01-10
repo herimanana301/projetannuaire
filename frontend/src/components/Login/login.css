@@ -31,7 +31,8 @@ h1{
 
 img{
     width: 40vw;
-    margin-top: 2rem;
+    padding-top: 2rem;
+    background-color: #181A21;
 }
 
 .input-insertion{
@@ -45,6 +46,19 @@ img{
     font-size: 0.9rem;
 }
 
+.register-button{
+    color:#4965FF;
+    font-family: MADE TOMMY;
+    font-size: larger;
+    padding: 1rem 2rem;
+    background-color: #EDEDED;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 6vh;
+    width: 8rem;
+}
+
 .login-button{
     color:#EDEDED;
     font-family: MADE TOMMY;
@@ -55,6 +69,7 @@ img{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 6vh;
+    width: 8rem;
 }
 
 .wording{
@@ -69,3 +84,28 @@ img{
     flex-direction: column;
     align-items: center;
 }
+
+.login-error{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom:2rem;
+    border-radius: 10px;
+    background-color: #3D3D45;
+    margin:1.5rem;
+    padding:10px;
+}
+
+.login-error>h1{
+    font-size: 20px;
+    color:#CA2525 ;
+    background-color: #3D3D45;  
+}
+
+.login-error>img{
+    background-color: #3D3D45;
+    width: 12%;
+    height: 12%;
+}
+

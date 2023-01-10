@@ -15,8 +15,8 @@ function FirstPage() {
           </button>
         </Link>
         <Link to="/login">
-          <button className="login-button" type="button">
-            login
+          <button className="register-button" type="button">
+            Login
           </button>
         </Link>
       </div>
