@@ -3,17 +3,16 @@ const mysql = require("mysql")
 const cors = require('cors')
 const crypto=require("crypto")
 const jwt = require('jsonwebtoken');
-const { resourceLimits } = require("worker_threads");
-const { allowedNodeEnvironmentFlags } = require("process");
+require("dotenv").config()
 
 const app = express();
 app.use(express.json());
 app.use(cors())
 const database = mysql.createConnection({
-    user : "root",
-    host: "localhost",
-    password : "bluepixteam",
-    database: "annuaire"
+    user : process.env.USER,
+    host: process.env.HOST,
+    password : process.env.PASSWORD,
+    database: process.env.DATABASE
 });
 function crypt(pawd){
     return crypto.createHash('sha512').update(pawd+"boki").digest('hex');
@@ -45,7 +44,6 @@ app.post("/register", (req,res)=>{
 app.post("/login", (req, res)=>{
     const email= req.body.email
     const password = crypt(req.body.password)
-
     database.query("SELECT * FROM Users WHERE email = ? AND password = ?", 
     [email, password],
     (err, result)=>{
@@ -54,7 +52,7 @@ app.post("/login", (req, res)=>{
             res.sendStatus(500);
         }
         if(result.length>0){
-            const accessToken = jwt.sign({ userId: result[0].id }, 'secretkey');
+            const accessToken = jwt.sign({ userId: result[0].id,isAdmin: result[0].isadmin}, 'secretkey');
             res.cookie("access_token", accessToken, {httpOnly: true});
             res.json({accessToken})
         }else{
@@ -109,7 +107,7 @@ app.post("/currentuser", (req,res)=>{
         if(err){
             console.error(err)
         }else{
-            res.json
+            res.json(result)
         }
     })
 })

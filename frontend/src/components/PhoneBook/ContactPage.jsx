@@ -12,7 +12,6 @@ function ContactPage() {
   const token = Cookies.get("access_token");
   const decodedToken = jwtDecode(token);
   const idUser = decodedToken.userId;
-
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
@@ -39,10 +38,10 @@ function ContactPage() {
       ) : (
         userContact.map((contact) => {
           return (
-            <div>
+            <div key={contact.contact_email}>
               <ul>
                 <Link to={`/details/${contact.id}`}>
-                  <li key={contact.contact_email}>
+                  <li>
                     {contact.contact_profilepicture}
                     {contact.contact_firstname}
                     {contact.contact_lastname}
